@@ -1,2 +1,8 @@
 generator.THE_VOID=奈落
 generator.SKY_BLOCK=スカイブロック
+tile.oreGenerator.0.name=鉱石生成ブロック (石)
+tile.oreGenerator.1.name=鉱石生成ブロック (鉄)
+tile.oreGenerator.2.name=鉱石生成ブロック (ダイヤ)
+item.tierUpgrade.name=ティアアップグレード
+item.tierDowngrade.name=ティアダウングレード
+itemGroup.clayiumskyblock=Clayium SkyBlock
