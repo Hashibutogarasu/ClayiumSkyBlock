@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.karasu256.clayiumskyblock.registry.ModBlocks;
+
 import cpw.mods.fml.common.IWorldGenerator;
 
 /**
@@ -52,6 +54,7 @@ public class SkyBlockWorldGenerator implements IWorldGenerator {
         if (chest != null) {
             chest.setInventorySlotContents(0, new ItemStack(Items.water_bucket));
             chest.setInventorySlotContents(1, new ItemStack(Items.lava_bucket));
+            chest.setInventorySlotContents(2, new ItemStack(ModBlocks.blockOreGenerator));
         }
     }
 

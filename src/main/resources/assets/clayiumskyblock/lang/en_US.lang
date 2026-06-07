@@ -1,2 +1,8 @@
 generator.THE_VOID=The Void
 generator.SKY_BLOCK=Sky Block
+tile.oreGenerator.0.name=Ore Generator (Stone)
+tile.oreGenerator.1.name=Ore Generator (Iron)
+tile.oreGenerator.2.name=Ore Generator (Diamond)
+item.tierUpgrade.name=Tier Upgrade
+item.tierDowngrade.name=Tier Downgrade
+itemGroup.clayiumskyblock=Clayium SkyBlock

@@ -2,6 +2,11 @@ package com.karasu256.clayiumskyblock;
 
 import net.minecraftforge.common.MinecraftForge;
 
+import com.karasu256.clayiumskyblock.block.OreType;
+import com.karasu256.clayiumskyblock.recipe.RecipeTierDowngrade;
+import com.karasu256.clayiumskyblock.recipe.RecipeTierUpgrade;
+import com.karasu256.clayiumskyblock.registry.ModBlocks;
+import com.karasu256.clayiumskyblock.registry.ModItems;
 import com.karasu256.clayiumskyblock.world.SkyBlockEventHandler;
 import com.karasu256.clayiumskyblock.world.SkyBlockWorldGenerator;
 import com.karasu256.clayiumskyblock.world.SkyBlockWorldType;
@@ -27,6 +32,8 @@ public class CommonProxy {
         Object init = VoidWorldType.INSTANCE;
         @SuppressWarnings("unused")
         Object init2 = SkyBlockWorldType.INSTANCE;
+        ModBlocks.register();
+        ModItems.register();
     }
 
     /**
@@ -37,6 +44,8 @@ public class CommonProxy {
     public void init(FMLInitializationEvent event) {
         GameRegistry.registerWorldGenerator(new SkyBlockWorldGenerator(), 0);
         MinecraftForge.EVENT_BUS.register(new SkyBlockEventHandler());
+        GameRegistry.addRecipe(new RecipeTierUpgrade());
+        GameRegistry.addRecipe(new RecipeTierDowngrade());
     }
 
     /**
@@ -44,7 +53,9 @@ public class CommonProxy {
      *
      * @param event the post-initialization event
      */
-    public void postInit(FMLPostInitializationEvent event) {}
+    public void postInit(FMLPostInitializationEvent event) {
+        OreType.resolveBlocks();
+    }
 
     /**
      * Runs when the server is starting.
