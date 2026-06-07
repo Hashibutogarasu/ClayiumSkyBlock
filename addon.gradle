@@ -1,0 +1,4 @@
+def javaHome = System.getenv("JAVA_HOME") ?: { throw new GradleException("JAVA_HOME environment variable is not set.") }()
+def javaExe = javaHome + "/bin/java.exe"
+
+tasks.withType(JavaExec).configureEach { executable(javaExe) }
