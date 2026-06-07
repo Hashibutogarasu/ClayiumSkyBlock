@@ -47,7 +47,7 @@ Obfuscated jars must be wrapped with `rfg.deobf()` to deobfuscate them for the d
 
 ## Code Formatting
 
-Spotless (Google Java Format) runs automatically during builds via `spotlessCheck`. A formatting violation will fail the build. Always run `./gradlew spotlessApply` after editing Java files.
+Spotless (Google Java Format) runs automatically during builds via `spotlessCheck`. A formatting violation will fail the build. Always run `./gradlew spotlessApply` before building or committing after editing Java files.
 
 ## Coding Rules
 
@@ -85,6 +85,10 @@ public void registerRecipes(FMLInitializationEvent event) { ... }
 - **Never use scopes** — `feat(auth): ...` style is not allowed
 - Commit messages must always be written in **English**
 - PR titles follow the same format and must also be in English
+
+## Codebase Exploration
+
+Always use the **Bash tool** for file search and exploration (e.g. `find`, `cat`, `grep`). Do **not** spawn an Explore sub-agent.
 
 ## Package Naming
 
